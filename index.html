@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
+        <link href="/static/favicon.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <title class="btlogo">GetYourMed | {% block title %}{% endblock %}</title>
+
+    <body>
+        <nav class="navbar navbar-expand-md" style="background-color: black; mix-blend-mode: difference; font-family: favoritexp !important;">
+            <a class="navbar-brand" href="/" style="font-weight: bolder;"><span style="color: #666666;">Get</span><span style="color: blueviolet" >Your</span><span>Med</span><span style="color: #0dcaf0;">.com</span></a>
+            <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="navbar-nav" style="color: #0dcaf0">
+                        <li class="nav-item" style="color: mediumslateblue"><a class="nav-link" href="/quote">Quote</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/buy">Buy</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/sell">Sell</a></li>
+                    </ul>
+            </div>
+        </nav>
+        <hr style="margin: auto">
+
+        <div id="loader" class="center"></div>
+
+        <script>
+            document.onreadystatechange = function() {
+                if (document.readyState !== "complete") {
+                    document.querySelector(
+                        "body").style.visibility = "hidden";
+                    document.querySelector(
+                        "#loader").style.visibility = "visible";
+                } else {
+                    document.querySelector(
+                        "#loader").style.display = "none";
+                    document.querySelector(
+                        "body").style.visibility = "visible";
+                }
+            };
+        </script>
+
+        <main>
+    <br>
+    <script>
+        function hideDiv() {
+            var x = document.getElementById("widget");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <br>
+    </div>
+    <div>
+        {% for product in products %}
+        <div class="prodContainer">
+            <div class="left">
+                <h2>Available at: <p>{{ product[2] }}</p></h2>
+                <div class="stock" style="display: flex; color: grey;">
+                    <span>{{ product[1] }} units in stock</span>
+                    <small>Last checked at {{ product[5] }}</small>
+                </div>
+                <h1 class="prodtitle">{{ product[1] }}</h1>
+            </div>
+            <div class="right">
+                <button class="get">Get Now</button>
+                <a href="tel:{{ product[1] }}">{{ product[4] }}</a>
+            </div>
+
+        </div>
+        {% endfor }
+    </div>
+    <style>
+        .prodContainer {
+            color: white;
+            font-family: 'ABC Favorit Extended Trial';
+            width: calc(100vw - 40px) !important;
+            height: max-content;
+            margin: auto;
+            text-align: left;
+            background-color: black;
+            padding: 0.5em;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            display: flex;
+            flex-direction: row;
+        }/* 
+        .prodImg {
+            float: left;
+            padding: 0%;
+            margin: 0%;
+            width: 20vw;
+        } */
+        
+        .left {
+            width: 80%;
+        }
+        
+        .right {
+            width: 20%;
+            height: 100%;
+        }
+
+        a {
+            bottom: 0;
+        }
+
+        h1 {
+            color: white;
+            font-family: 'ABC Favorit Extended Trial';
+            text-align: left;
+        }
+
+        h2 {
+            color: white;
+            padding: 0.2em;
+        }
+
+        .get {
+            width: 100%;
+            padding: 0 1em;
+            f
+        }
+    </style>
+
+
+    <script>
+        function hideDiv1() {
+            var y = document.getElementById("widget1");
+            if (y.style.display === "none") {
+                y.style.display = "block";
+            } else {
+                y.style.display = "none";
+            }
+        }
+    </script>
+    </div>
+
+</main>
+<hr style="margin: auto;">
+
+
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+<script>
+    function addDarkmodeWidget() {
+        new Darkmode().showWidget();
+    }
+    window.addEventListener('load', addDarkmodeWidget);
+</script>
+<script>
+    import Darkmode from 'darkmode-js';
+    const options = {
+        bottom: '64px', // default: '32px'
+        right: 'unset', // default: '32px'
+        left: '32px', // default: 'unset'
+        time: '0.5s', // default: '0.3s'
+        mixColor: 'blue', // default: '#fff'
+        backgroundColor: '#fff',  // default: '#fff'
+        buttonColorDark: '#100f2c',  // default: '#100f2c'
+        buttonColorLight: 'gold', // default: '#fff'
+        saveInCookies: true, // default: true,
+        label: '🌓', // default: ''
+        autoMatchOsTheme: true // default: true
+    }
+
+    const darkmode = new Darkmode(options);
+    darkmode.showWidget();
+</script>
+
+<br>
+
+<footer class="small text-center text-muted">
+    <a>Built by </a><a href="https://raajvir.com">Raajvir Vijay</a> and <a>Naman Jain</a>.
+<!--     <br><br>Powered by <a href="https://zing.vision">ZING.VISION</a> -->
+</footer>
+<br>
+
+</body>
+
+</html>
