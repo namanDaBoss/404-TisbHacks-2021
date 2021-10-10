@@ -16,7 +16,8 @@
 }
 
 .prodContainer {
-    background-image: url('gradbg.png') !important;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8)), url("gradbg.png");
+    opacity: 0.9;
 }
 
 #loader {
@@ -65,7 +66,7 @@ ul.nav li.active a {
 
 .box:hover {
     color: white;
-    background-color: black !important;
+    background-color: rgba(0, 0, 0, 0) !important;
     box-shadow:0px 0px 0px 3px rgb(255, 255, 255) inset;
 }
 

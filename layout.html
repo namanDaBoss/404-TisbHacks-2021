@@ -28,16 +28,32 @@
         <title class="btlogo">GetYourMed | {% block title %}{% endblock %}</title>
 
     <body>
-        <nav class="navbar navbar-expand-md" style="background-color: black; mix-blend-mode: difference; font-family: favoritexp !important;">
-            <a class="navbar-brand" href="/" style="font-weight: bolder;"><span style="color: #666666;">Get</span><span style="color: blueviolet" >Your</span><span>Med</span><span style="color: #0dcaf0;">.com</span></a>
+        <nav class="navbar sticky-top navbar-expand-md" style="background-color: rgba(0, 0, 0, 0.657); isolation: none !important; font-family: 'favoritexp' !important;">
+            <a class="navbar-brand" href="/" style="font-weight: bolder; font-size: 1.9em;"><span style="color: #ffffff;">Get</span><span style="color: rgb(143, 143, 143)" >Your</span><span style="background: -webkit-linear-gradient(rgb(0, 140, 255), rgb(0, 255, 255)); -webkit-background-clip: text;-webkit-text-fill-color: transparent;">Med</span><span style="color: #2f2f2f;">.com</span></a>
             <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbar">
-                    <ul class="navbar-nav" style="color: #0dcaf0">
-                        <li class="nav-item" style="color: mediumslateblue"><a class="nav-link" href="/quote">Quote</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/buy">Buy</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/sell">Sell</a></li>
+            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbar" style="text-align: right; right: 0; font-size: 1.5em; font-family: 'favoritextb'; color: white !important;">
+                    <ul class="navbar-nav ml-auto">
+                        <script async src="https://static.addtoany.com/menu/page.js"></script>
+                        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                        <script>
+                            $('sharebtn').on('click', () => {
+                                if (navigator.share) {
+                                navigator.share({
+                                    title: 'Web Share API Draft',
+                                    text: 'Take a look at this spec!',
+                                    url: 'https://wicg.github.io/web-share/#share-method',
+                                    })
+                                    .then(() => console.log('Successful share'))
+                                    .catch((error) => console.log('Error sharing', error));
+                                } else {
+                                console.log('Share not supported on this browser, do it the old way.');
+                                }
+                            });
+                          </script> -->
+                        <li class="nav-item text-white" style="margin: 0 0.5em;"><a id="sharebtn" class="nav-link a2a_dd" href="https://www.addtoany.com/share">Share</a></li>
+                        <li class="nav-item"><div class="box" style="color: rgb(0, 0, 0) !important; width: max-content; height: max-content; mix-blend-mode: difference !important; background-color: rgb(202, 202, 202);"><a class="nav-link" href="/add">List Your Product</a></div></li>
                     </ul>
             </div>
         </nav>
@@ -152,7 +168,7 @@
 
         <footer class="small text-center text-muted">
             <a>Built by </a><a href="https://raajvir.com">Raajvir Vijay</a> and <a>Naman Jain</a>.
-            <br><br>Powered by <a href="https://zing.vision">ZING.VISION</a>
+            <!-- <br><br>Powered by <a href="https://zing.vision">ZING.VISION</a> -->
         </footer>
         <br>
 

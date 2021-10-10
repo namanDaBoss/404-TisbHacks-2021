@@ -1,20 +1,21 @@
 {% extends "layout.html" %}
 
 {% block title %}
-List your product
+Edit your product's details
 {% endblock %}
 
 {% block main %}
-    <form action="/add" method="post" style="padding: 2em; font-family: 'favorit';">
-        <input type="text" id="p_name" name="p_name" placeholder="Oxygen Contrator 5L" style="font-size: 2em; font-family: 'favoritextb';"><br>
+    <!-- {{ product }} -->
+    <form action="/edit" method="post" style="padding: 2em; font-family: 'favorit';">
+        <input type="text" id="p_name" name="p_name" placeholder="Oxygen Contrator 5L" value="{{ product[1] }}" style="font-size: 2em; font-family: 'favoritextb';"><br>
         <small>Available at:</small><br>
-        <input type="text" name="location" id="location" placeholder="4558 Briarwood Road, Blue Eye, MO, Missouri, 6561" style="margin-bottom: 1em !important; width: 80%;"><br>
+        <input type="text" name="location" id="location" placeholder="4558 Briarwood Road, Blue Eye, MO, Missouri, 6561" style="margin-bottom: 1em !important; width: 80%;" value="{{product[6]}}"><br>
         <small>Contact</small><br>
         <div class="form-group">
-            <label for="name">Name: </label><input name="seller_name" id="seller_name" type="text" placeholder="John Doe"><br>
-            <label for="phone">Phone Number (+91): </label><input name="seller_phone" id="seller_phone" type="tel" placeholder="+04 9283747223"><br>
-            <label for="email">Email Address</label><input id="seller_email" name="seller_email" type="email" placeholder="johndoe@google.com"><br><br>
-            <label for="units">Units In stock</label><input id="units" name="units" type="number" placeholder="12">
+            <label for="name">Name: </label><input name="seller_name" id="seller_name" type="text" placeholder="John Doe" value="{{product[2]}}"><br>
+            <label for="phone">Phone Number (+91): </label><input name="seller_phone" id="seller_phone" type="tel" placeholder="+04 9283747223" value="{{product[4]}}"><br>
+            <label for="email">Email Address</label><input id="seller_email" name="seller_email" type="email" placeholder="johndoe@google.com" value="{{product[5]}}"><br><br>
+            <label for="units">Units In stock</label><input id="units" name="units" type="number" placeholder="12" value="{{product[4]}}">
         </div>
         <button id="submit" type="submit">Confirm Listing</button>
     </form>
