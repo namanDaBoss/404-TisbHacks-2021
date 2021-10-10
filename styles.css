@@ -1,6 +1,22 @@
 @font-face {
     font-family: 'favoritext';
-    src: url('ABCFavoritExtended-Regular-Trial.woff2');
+    src: url('fonts/ABCFavoritExtended-Regular-Trial.woff2');
+}
+@font-face {
+    font-family: 'favoritextb';
+    src: url('fonts/ABCFavoritExtended-Bold-Trial.woff2');
+}
+@font-face {
+    font-family: 'favoritexp';
+    src: url('fonts/ABCFavoritExpanded-Regular-Trial.woff2');
+}
+@font-face {
+    font-family: 'favorit';
+    src: url('fonts/ABCFavorit-Regular-Trial.woff2');
+}
+
+.prodContainer {
+    background-image: url('gradbg.png') !important;
 }
 
 #loader {
@@ -27,40 +43,32 @@
     margin: auto;
 }
 
-/* .float-left-child {
-    float: left
+ul.nav li a, ul.nav li a:visited {
+    color: unset !important;
 }
 
-
-.inline-block-child {
-    display: inline-block;
+ul.nav li a:hover, ul.nav li a:active {
+    color: unset !important;
 }
 
-
-.flex-parent {
-    display: flex;
-}
-.flex-child {
-    flex: 1;
+ul.nav li.active a {
+    color: unset !important;
 }
 
-
-.inline-flex-parent {
-    display: inline-flex;
-} */
-.btlogo{
-    font-family: 'Righteous';
-    font-weight: 100;
-    font-size: 90%;
-}
-.btfin{
-    font-family: 'Playfair Display';
-    font-weight: 400;
+.text-white {
+    color: white !important;
 }
 
-.wetaherwid{
-    width: 980px;
+.text-white:hover {
+    color: lightslategray !important;
 }
+
+.box:hover {
+    color: white;
+    background-color: black !important;
+    box-shadow:0px 0px 0px 3px rgb(255, 255, 255) inset;
+}
+
 
 
 

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+List your product
+{% endblock %}
+
+{% block main %}
+    <form action="/add" method="post">
+        <input type="text" id="name" ><br>
+        <small>Available at:</small><br>
+        <input type="text"><br>
+        <small>Contact</small><br>
+        <div class="form-group">
+            <label for="name">Name: </label><input id="name" type="text"><br>
+            <label for="phone">Phone Number (With country code): </label><input id="phone" type="phone"><br>
+            <label for="email">Email Address</label><input id="email" type="text"><br><br>
+            <label for="stock">Units In stock</label><input id="stock" type="number">
+        </div>
+        <button id="submit" class="btn btn-success" type="submit">Confirm Listing</button>
+    </form>
+    <style>
+        input {
+            outline: none;
+            border: 2px solid black;
+            margin: 0.5em;
+            padding: 0.2em;
+        }
+    </style>
+<script>
+    // password validation, you can submit only if the pass is at least 8 characters and contains only alphanumeric characters
+    document.querySelector('#submit').disabled = true;
+    document.querySelector('#stock').onkeyup = function() {
+        let stock = document.querySelector('#stock').value;
+
+        if (stock.length > 0){
+            document.querySelector('#submit').disabled = false;
+        }
+        else {
+            document.querySelector('#submit').disabled = true;
+        }
+    }
+</script>
+{% endblock %}
